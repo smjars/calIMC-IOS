@@ -39,6 +39,27 @@ class ViewController: UIViewController {
         let hinmeters = (Float(heigth) / 100.0);
         let imc = weigth / pow(hinmeters, 2);
         resultLabel.text = String(format: "%.2f", imc);
+        setResult(fromValue: imc)
+    }
+    
+    // Resultado
+    @IBOutlet weak var resultadoLabel: UILabel!
+    
+    func setResult(fromValue result: Float) {
+            switch result {
+            case ..<18.5:
+                resultadoLabel.text = "Flaco"
+            case 18.5..<24.9:
+                resultadoLabel.text = "Normal"
+            case 25.0..<29.9:
+                resultadoLabel.text = "Gordito"
+            case 30.0..<34.9:
+                resultadoLabel.text = "Gordo"
+            case 35.0..<39.9:
+                resultadoLabel.text = "Gordo Gordo"
+            default:
+                resultadoLabel.text = "Casi Explotas"
+            }
     }
 }
 
