@@ -49,17 +49,28 @@ class ViewController: UIViewController {
             switch result {
             case ..<18.5:
                 resultadoLabel.text = "Flaco"
-            case 18.5..<24.9:
+                resultLabel.textColor=UIColor(named: "coloresIMC/Color 1");
+            case 18.5..<25:
                 resultadoLabel.text = "Normal"
-            case 25.0..<29.9:
+                resultLabel.textColor=UIColor(named: "coloresIMC/Color 2");
+            case 25.0..<30:
                 resultadoLabel.text = "Gordito"
-            case 30.0..<34.9:
+                resultLabel.textColor=UIColor(named: "coloresIMC/Color 3");
+            case 30.0..<35:
                 resultadoLabel.text = "Gordo"
-            case 35.0..<39.9:
+                resultLabel.textColor=UIColor(named: "coloresIMC/Color 4");
+            case 35.0..<40:
                 resultadoLabel.text = "Gordo Gordo"
+                resultLabel.textColor=UIColor(named: "coloresIMC/Color 4");
             default:
-                resultadoLabel.text = "Casi Explotas"
+                resultadoLabel.text = "Gordo Gordo Gordo"
+                resultLabel.textColor=UIColor(named: "coloresIMC/Color 4");
             }
     }
+
+    @IBAction func closeInfo(_ sender: UIStoryboardSegue){
+        
+    }
+    
 }
 
